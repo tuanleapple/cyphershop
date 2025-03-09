@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Woku Shop - Website Chính Thức</title>
+    <title>cypher Shop - Website Chính Thức</title>
     <style>
         :root {
             --primary-color: #f95e22;
@@ -350,6 +350,413 @@
                 padding: 0 5px;
             }
         }
+
+        body {
+            background-color: #f8f8f8;
+            /* padding: 20px; */
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3px;
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .logo-square {
+            background-color: #e94e3d;
+            border-radius: 3px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            background: linear-gradient(90deg, #e94e3d 0%, #b34180 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Divider */
+        .divider {
+            border-top: 1px solid #e0e0e0;
+            margin: 20px 0;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        /* Product Image Container */
+        .product-image-container {
+            position: relative;
+            background-color: #1a1a1a;
+            padding: 20px;
+            height: 260px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Discount Badge */
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #e94e3d;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Diagonal Stripe */
+        .diagonal-stripe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .diagonal-stripe::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 300px;
+            background-color: rgba(144, 238, 144, 0.7);
+            transform: rotate(15deg) translateX(20px) translateY(-100px);
+        }
+
+        /* Product Image */
+        .product-image {
+            max-width: 100%;
+            max-height: 160px;
+        }
+
+        /* Subscription Duration */
+        .subscription-duration {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #e9b63d;
+            color: black;
+            padding: 3px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Product Info */
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            height: 40px;
+        }
+
+        /* Price */
+        .price-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            color: #e94e3d;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .original-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+
+        .price-range {
+            display: flex;
+            align-items: center;
+        }
+
+        .price-dash {
+            margin: 0 10px;
+            color: #e94e3d;
+        }
+
+        /* Stock and Cart */
+        .stock-cart {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+        }
+
+        .in-stock {
+            display: flex;
+            align-items: center;
+            color: #4caf50;
+            font-size: 14px;
+        }
+
+        .in-stock-icon {
+            margin-right: 5px;
+            font-size: 18px;
+        }
+
+        .cart-button {
+            width: 40px;
+            height: 40px;
+            background-color: #e94e3d;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Feature List */
+        .feature-list {
+            padding: 15px;
+            list-style-type: none;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .feature-icon {
+            color: #4caf50;
+            margin-right: 8px;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background-color: #e94e3d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .cta-button .arrow {
+            margin-left: 5px;
+        }
+
+        /* Icons */
+        .icon {
+            font-size: 18px;
+        }
+        .footer {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 40px 0 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ccc;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .group-links {
+            list-style: none;
+            text-align: left;
+            width: 100%;
+        }
+
+        .group-links li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .group-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .group-links a:hover {
+            color: #ccc;
+        }
+
+        .group-links .icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .payment-methods {
+            background-color: #262626;
+            padding: 15px 0;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .payment-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .payment-methods-text {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .payment-icon {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 5px;
+        }
+
+        .payment-icon img {
+            height: 20px;
+            width: auto;
+        }
+
+        .copyright {
+            background-color: #222;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Icon placeholders */
+        .icon-person {
+            content: "👥";
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -374,11 +781,11 @@
                     </svg>
                     Hotline 0326 923 071
                 </a>
-                <a href="mailto:cskh@wokushop.com">
+                <a href="mailto:cskh@cyphershop.com">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                     </svg>
-                    cskh@wokushop.com
+                    cskh@cyphershop.com
                 </a>
             </div>
             
@@ -388,7 +795,7 @@
         <!-- Sub header with logo, search and user actions -->
         <div class="sub-header">
             <!-- Logo -->
-            <img src="path-to-logo.png" alt="Woku Shop Logo" class="logo">
+            <img src="path-to-logo.png" alt="cypher Shop Logo" class="logo">
             
             <!-- Menu button (mobile) -->
             <button class="menu-button">
@@ -436,7 +843,7 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Website mới - Nâng tầm trải nghiệm khách hàng</h1>
-                <p>Woku Shop chính thức ra mắt website mới, hỗ trợ thanh toán 24/7 và quản lý đơn hàng tự động, giúp khách hàng có trải nghiệm tốt nhất khi mua hàng. Sự hài lòng và tin tưởng của khách hàng là tiêu chỉ phấn đấu của chúng tôi</p>
+                <p>cypher Shop chính thức ra mắt website mới, hỗ trợ thanh toán 24/7 và quản lý đơn hàng tự động, giúp khách hàng có trải nghiệm tốt nhất khi mua hàng. Sự hài lòng và tin tưởng của khách hàng là tiêu chỉ phấn đấu của chúng tôi</p>
             </div>
         </div>
     </section>
@@ -496,5 +903,242 @@
             }
         });
     </script>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-square"></div>
+                <div class="logo-square"></div>
+                <div class="logo-square"></div>
+                <div class="logo-square"></div>
+            </div>
+            <h1>Sản Phẩm Mới Nhất</h1>
+        </div>
+    
+        <div class="divider"></div>
+    
+        <!-- Product Grid -->
+        <div class="product-grid">
+            <!-- Truecaller -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="discount-badge">-40%</div>
+                    <div class="diagonal-stripe"></div>
+                    <img src="https://via.placeholder.com/150/0066FF/FFFFFF?text=Truecaller" alt="Truecaller" class="product-image">
+                    <div class="subscription-duration">12 THÁNG</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Tài khoản Truecaller Premium Chính Chủ 1 Năm</div>
+                    <div class="price-container">
+                        <span class="current-price">150.000 đ</span>
+                        <span class="original-price">250.000 đ</span>
+                    </div>
+                </div>
+                <div class="stock-cart">
+                    <div class="in-stock">
+                        <span class="in-stock-icon">✓</span>
+                        Còn hàng
+                    </div>
+                    <div class="cart-button">🛒</div>
+                </div>
+            </div>
+    
+            <!-- Duolingo -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="discount-badge">-0%</div>
+                    <div class="diagonal-stripe"></div>
+                    <img src="https://via.placeholder.com/150/8BC34A/FFFFFF?text=Duolingo" alt="Duolingo" class="product-image">
+                    <div class="subscription-duration">12 THÁNG</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Nâng Cấp Tài Khoản Duolingo Super Giá Rẻ</div>
+                    <div class="price-container">
+                        <div class="price-range">
+                            <span class="current-price">15.000 đ</span>
+                            <span class="price-dash">–</span>
+                            <span class="current-price">150.000 đ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stock-cart">
+                    <div class="in-stock">
+                        <span class="in-stock-icon">✓</span>
+                        Còn hàng
+                    </div>
+                    <div class="cart-button">🛒</div>
+                </div>
+            </div>
+    
+            <!-- VPN China -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="discount-badge">-50%</div>
+                    <div class="diagonal-stripe"></div>
+                    <img src="https://via.placeholder.com/150/E53935/FFFFFF?text=VPN" alt="VPN China" class="product-image">
+                    <div class="subscription-duration">1 THÁNG</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">VPN Trung Quốc mở chặn Facebook, Tiktok, Google, ...</div>
+                    <div class="price-container">
+                        <span class="current-price">50.000 đ</span>
+                        <span class="original-price">100.000 đ</span>
+                    </div>
+                </div>
+                <div class="stock-cart">
+                    <div class="in-stock">
+                        <span class="in-stock-icon">✓</span>
+                        Còn hàng
+                    </div>
+                    <div class="cart-button">🛒</div>
+                </div>
+            </div>
+    
+            <!-- Adobe -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://via.placeholder.com/150/333333/FFFFFF?text=Adobe" alt="Adobe" class="product-image">
+                    <div class="subscription-duration">12 THÁNG</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Tài Khoản Adobe All Apps 12 Tháng</div>
+                    <div class="price-container">
+                        <span class="current-price">99.000 đ</span>
+                        <span class="original-price">118.000 đ</span>
+                    </div>
+                </div>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Truy cập trọn bộ ứng dụng Adobe Creative Cloud, từ Photoshop đến Premiere Pro.</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Hỗ trợ đăng nhập trên 2 thiết bị, sử dụng 1 thiết bị tại một thời điểm.</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Bảo hành toàn thời gian sử dụng với hỗ trợ tận tình từ Woku Shop.</span>
+                    </li>
+                </ul>
+                <button class="cta-button">
+                    Khám phá ngay <span class="arrow">→</span>
+                </button>
+                <div class="stock-cart">
+                    <div class="in-stock">
+                        <span class="in-stock-icon">✓</span>
+                        Còn hàng
+                    </div>
+                    <div class="cart-button">🛒</div>
+                </div>
+            </div>
+    
+            <!-- Miro -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="discount-badge">-17%</div>
+                    <div class="diagonal-stripe"></div>
+                    <img src="https://via.placeholder.com/150/FFD700/000000?text=Miro" alt="Miro" class="product-image">
+                    <div class="subscription-duration">24 THÁNG</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Nâng Cấp Tài Khoản Miro Chính Chủ</div>
+                    <div class="price-container">
+                        <span class="current-price">199.000 đ</span>
+                        <span class="original-price">238.000 đ</span>
+                    </div>
+                </div>
+                <div class="stock-cart">
+                    <div class="in-stock">
+                        <span class="in-stock-icon">✓</span>
+                        Còn hàng
+                    </div>
+                    <div class="cart-button">🛒</div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- About Us Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">VỀ CHÚNG TÔI</h3>
+                    <p class="footer-text">
+                        Với nhiều năm kinh nghiệm cung cấp hàng ngàn tài khoản Premium, chúng tôi tự tin đem lại chất lượng dịch vụ tốt nhất cho sự trải nghiệm của khách hàng.
+                    </p>
+                </div>
+    
+                <!-- Products Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">SẢN PHẨM</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Giải trí</a></li>
+                        <li><a href="#">Làm việc</a></li>
+                        <li><a href="#">Học tập</a></li>
+                        <li><a href="#">Dịch vụ mạng xã hội</a></li>
+                        <li><a href="#">Thiết kế</a></li>
+                        <li><a href="#">VPN</a></li>
+                        <li><a href="#">Gói cước - Data 4G</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Information Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">THÔNG TIN</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Hướng dẫn thanh toán</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                    </ul>
+                    
+                    <h3 class="footer-title" style="margin-top: 20px;">HỖ TRỢ</h3>
+                    <ul class="footer-links">
+                        <li>Facebook: Hoàng Triều Giang</li>
+                        <li>Zalo: 0965324305</li>
+                        <li>Email: support@gshopvn.com</li>
+                    </ul>
+                </div>
+    
+                <!-- Connect Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">KẾT NỐI VỚI GSHOPVN</h3>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><span>📱</span></a>
+                        <a href="#" title="YouTube"><span>📺</span></a>
+                        <a href="#" title="Instagram"><span>📷</span></a>
+                        <a href="#" title="Telegram"><span>✈️</span></a>
+                        <a href="#" title="Discord"><span>💬</span></a>
+                        <a href="#" title="TikTok"><span>🎵</span></a>
+                        <a href="#" title="Zalo"><span>💬</span></a>
+                    </div>
+                    
+                    <h3 class="footer-title" style="margin-top: 20px;">GROUP</h3>
+                    <ul class="group-links">
+                        <li>
+                            <span class="icon">👥</span>
+                            <a href="#">Facebook Group 1</a>
+                        </li>
+                        <li>
+                            <span class="icon">👥</span>
+                            <a href="#">Facebook Group 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <div class="payment-container">
+                    <span class="payment-methods-text">Hình thức thanh toán:</span>
+                    <span class="payment-icon">Tiền mặt 💵</span>
+                    <span class="payment-icon">| Chuyển khoản 🏦</span>
+                    <span class="payment-icon">| Thẻ cào điện thoại 📱</span>
+                    <span class="payment-icon">| Paypal 💳</span>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="copyright">
+                © 2022 Copyright: gshopvn.com
+            </div>
+        </footer>
 </body>
 </html>
