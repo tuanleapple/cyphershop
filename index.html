@@ -185,7 +185,7 @@
             position: relative;
             height: 100vh;
             overflow: hidden;
-            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('path-to-bg-image.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('./uploads/Banner-Web-08.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -198,6 +198,7 @@
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
+            
         }
         
         .hero-text {
@@ -350,6 +351,417 @@
                 padding: 0 5px;
             }
         }
+<<<<<<< Updated upstream
+=======
+
+        body {
+            background-color: #f8f8f8;
+            /* padding: 20px; */
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .logo {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3px;
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .logo-square {
+            background-color: #e94e3d;
+            border-radius: 3px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            background: linear-gradient(90deg, #e94e3d 0%, #b34180 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Divider */
+        .divider {
+            border-top: 1px solid #e0e0e0;
+            margin: 20px 0;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        /* Product Image Container */
+        .product-image-container {
+            position: relative;
+            background-color: #1a1a1a;
+            padding: 20px;
+            height: 260px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Discount Badge */
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #e94e3d;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Diagonal Stripe */
+        .diagonal-stripe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .diagonal-stripe::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 300px;
+            background-color: rgba(144, 238, 144, 0.7);
+            transform: rotate(15deg) translateX(20px) translateY(-100px);
+        }
+
+        /* Product Image */
+        .product-image {
+            max-width: 100%;
+            /* max-height: 160px; */
+        }
+
+        /* Subscription Duration */
+        .subscription-duration {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #e9b63d;
+            color: black;
+            padding: 3px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Product Info */
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            height: 40px;
+        }
+
+        /* Price */
+        .price-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            color: #e94e3d;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .original-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+
+        .price-range {
+            display: flex;
+            align-items: center;
+        }
+
+        .price-dash {
+            margin: 0 10px;
+            color: #e94e3d;
+        }
+
+        /* Stock and Cart */
+        .stock-cart {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+        }
+
+        .in-stock {
+            display: flex;
+            align-items: center;
+            color: #4caf50;
+            font-size: 14px;
+        }
+
+        .in-stock-icon {
+            margin-right: 5px;
+            font-size: 18px;
+        }
+
+        .cart-button {
+            width: 40px;
+            height: 40px;
+            background-color: #e94e3d;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Feature List */
+        .feature-list {
+            padding: 15px;
+            list-style-type: none;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .feature-icon {
+            color: #4caf50;
+            margin-right: 8px;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background-color: #e94e3d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .cta-button .arrow {
+            margin-left: 5px;
+        }
+
+        /* Icons */
+        .icon {
+            font-size: 18px;
+        }
+        .footer {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 40px 0 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ccc;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .group-links {
+            list-style: none;
+            text-align: left;
+            width: 100%;
+        }
+
+        .group-links li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .group-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .group-links a:hover {
+            color: #ccc;
+        }
+
+        .group-links .icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .payment-methods {
+            background-color: #262626;
+            padding: 15px 0;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .payment-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .payment-methods-text {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .payment-icon {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 5px;
+        }
+
+        .payment-icon img {
+            height: 20px;
+            width: auto;
+        }
+
+        .copyright {
+            background-color: #222;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Icon placeholders */
+        .icon-person {
+            content: "👥";
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+>>>>>>> Stashed changes
     </style>
 </head>
 <body>
@@ -357,15 +769,15 @@
     <header>
         <!-- Top navigation bar -->
         <div class="top-bar">
+            <img src="uploads/f9b6db44-6c33-4dca-bf80-b159ce78aa7b.jpeg" alt="cypher Shop Logo" class="logo">
             <nav class="nav-links">
                 <a href="#">Trang Chủ</a>
                 <a href="#">Giới thiệu</a>
-                <a href="#">Sản phẩm</a>
+                <!-- <a href="#">Sản phẩm</a>
                 <a href="#">Chính Sách</a>
                 <a href="#">FAQs</a>
-                <a href="#">Tin tức</a>
+                <a href="#">Tin tức</a> -->
             </nav>
-            
             <div class="contact-info">
                 <a href="tel:0326923071">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -382,12 +794,13 @@
                 </a>
             </div>
             
-            <a href="#" class="deal-button">Bấm để xem deal sốc</a>
+            <!-- <a href="#" class="deal-button">Bấm để xem deal sốc</a> -->
         </div>
         
         <!-- Sub header with logo, search and user actions -->
-        <div class="sub-header">
+        <!-- <div class="sub-header"> -->
             <!-- Logo -->
+<<<<<<< Updated upstream
             <img src="path-to-logo.png" alt="Woku Shop Logo" class="logo">
             
             <!-- Menu button (mobile) -->
@@ -397,20 +810,23 @@
                 </svg>
                 <span>Sản phẩm</span>
             </button>
+=======
+        
+>>>>>>> Stashed changes
             
             <!-- Search bar -->
-            <div class="search-bar">
+            <!-- <div class="search-bar">
                 <input type="text" placeholder="Tìm kiếm sản phẩm">
                 <button class="search-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 </button>
-            </div>
+            </div> -->
             
             <!-- User actions: cart and login -->
-            <div class="user-actions">
-                <button class="cart-button">
+            <!-- <div class="user-actions"> -->
+                <!-- <button class="cart-button">
                     <div class="cart-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -418,22 +834,23 @@
                         <span class="cart-badge">0</span>
                     </div>
                     Giỏ hàng
-                </button>
+                </button> -->
                 
-                <button class="login-button">
+                <!-- <button class="login-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                     </svg>
                     Đăng nhập
-                </button>
-            </div>
-        </div>
+                </button> -->
+            <!-- </div> -->
+        <!-- </div> -->
     </header>
     
     <!-- Hero section -->
     <section class="hero">
         <div class="hero-content">
+            <!-- <img src="./uploads/Banner-Web-08.png" alt="Hero background" class="hero-image"> -->
             <div class="hero-text">
                 <h1>Website mới - Nâng tầm trải nghiệm khách hàng</h1>
                 <p>Woku Shop chính thức ra mắt website mới, hỗ trợ thanh toán 24/7 và quản lý đơn hàng tự động, giúp khách hàng có trải nghiệm tốt nhất khi mua hàng. Sự hài lòng và tin tưởng của khách hàng là tiêu chỉ phấn đấu của chúng tôi</p>
@@ -443,11 +860,6 @@
     
     <!-- Slider section -->
     <div class="slider">
-        <div class="slide-container">
-            <div class="slide">
-                <img src="path-to-slide1.jpg" alt="Website chính thức" />
-            </div>
-        </div>
         
         <div class="slider-controls">
             <button class="slider-arrow prev">
@@ -496,5 +908,177 @@
             }
         });
     </script>
+<<<<<<< Updated upstream
+=======
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-square"></div>
+                <div class="logo-square"></div>
+                <div class="logo-square"></div>
+                <div class="logo-square"></div>
+            </div>
+            <h1>Sản Phẩm Mới Nhất</h1>
+        </div>
+    
+        <div class="divider"></div>
+    
+        <!-- Product Grid -->
+        <div class="product-grid">
+            <!-- Truecaller -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="discount-badge">-40%</div>
+                    <div class="diagonal-stripe"></div>
+                    <img src="./uploads/WOKU-09.png (1).webp" alt="Canva pro" class="product-image">
+                    <div class="subscription-duration">12 THÁNG</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Tài khoản Canva pro Chính Chủ 1 Năm</div>
+                    <div class="price-container">
+                        <span class="current-price">150.000 đ</span>
+                        <span class="original-price">250.000 đ</span>
+                    </div>
+                </div>
+                <div class="stock-cart">
+                    <div class="in-stock">
+                        <span class="in-stock-icon">✓</span>
+                        Còn hàng
+                    </div>
+                    <div class="cart-button">🛒</div>
+                </div>
+            </div>
+    
+            <!-- Duolingo -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="discount-badge">-0%</div>
+                    <div class="diagonal-stripe"></div>
+                    <img src="./uploads/WOKU-22.png (1).webp" alt="Duolingo" class="product-image">
+                    <div class="subscription-duration">12 THÁNG</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Nâng Cấp Tài Khoản Duolingo Super Giá Rẻ</div>
+                    <div class="price-container">
+                        <div class="price-range">
+                            <span class="current-price">15.000 đ</span>
+                            <span class="price-dash">–</span>
+                            <span class="current-price">150.000 đ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stock-cart">
+                    <div class="in-stock">
+                        <span class="in-stock-icon">✓</span>
+                        Còn hàng
+                    </div>
+                    <div class="cart-button">🛒</div>
+                </div>
+            </div>
+    
+            <!-- VPN China -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="discount-badge">-50%</div>
+                    <div class="diagonal-stripe"></div>
+                    <img src="./uploads/Artboard-1-copy.png.webp" alt="Youtube premium" class="product-image">
+                    <div class="subscription-duration">1 THÁNG</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Youtube premium</div>
+                    <div class="price-container">
+                        <span class="current-price">50.000 đ</span>
+                        <span class="original-price">100.000 đ</span>
+                    </div>
+                </div>
+                <div class="stock-cart">
+                    <div class="in-stock">
+                        <span class="in-stock-icon">✓</span>
+                        Còn hàng
+                    </div>
+                    <div class="cart-button">🛒</div>
+                </div>
+            </div>
+    
+        
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- About Us Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">VỀ CHÚNG TÔI</h3>
+                    <p class="footer-text">
+                        Với nhiều năm kinh nghiệm cung cấp hàng ngàn tài khoản Premium, chúng tôi tự tin đem lại chất lượng dịch vụ tốt nhất cho sự trải nghiệm của khách hàng.
+                    </p>
+                </div>
+    
+                <!-- Products Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">SẢN PHẨM</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Giải trí</a></li>
+                        <li><a href="#">Làm việc</a></li>
+                        <li><a href="#">Học tập</a></li>
+                        <li><a href="#">Thiết kế</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Information Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">THÔNG TIN</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Hướng dẫn thanh toán</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                    </ul>
+                    
+                    <h3 class="footer-title" style="margin-top: 20px;">HỖ TRỢ</h3>
+                    <ul class="footer-links">
+                        <li>Facebook: Cypher Shop </li>
+                        <li>Zalo: 0965324305</li>
+                        <li>Email: support@cyphershopvn.com</li>
+                    </ul>
+                </div>
+    
+                <!-- Connect Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">KẾT NỐI VỚI Cypher Shop</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61573855774688" title="Facebook"><span>📱</span></a>
+                        <!-- <a href="#" title="YouTube"><span>📺</span></a>
+                        <a href="#" title="Instagram"><span>📷</span></a>
+                        <a href="#" title="Telegram"><span>✈️</span></a>
+                        <a href="#" title="Discord"><span>💬</span></a>
+                        <a href="#" title="TikTok"><span>🎵</span></a> -->
+                        <a href="#" title="Zalo"><span>💬</span></a>
+                    </div>
+                    
+                    <h3 class="footer-title" style="margin-top: 20px;">GROUP</h3>
+                    <ul class="group-links">
+                        <li>
+                            <span class="icon">👥</span>
+                            <a href="https://www.facebook.com/profile.php?id=61573855774688">Facebook Group 1</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <div class="payment-container">
+                    <span class="payment-methods-text">Hình thức thanh toán:</span>
+                    <span class="payment-icon">Tiền mặt 💵</span>
+                    <span class="payment-icon">| Chuyển khoản 🏦</span>
+                    <span class="payment-icon">| Thẻ cào điện thoại 📱</span>
+                    <span class="payment-icon">| Paypal 💳</span>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="copyright">
+                © 2022 Copyright: cyphershopvn.com
+            </div>
+        </footer>
+>>>>>>> Stashed changes
 </body>
 </html>
