@@ -6460,7 +6460,7 @@ header {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('./uploads/Banner-Web-08.png');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('./uploads/Banner-Web-08.webp');
     background-size: cover;
     background-position: center;
     display: flex;
