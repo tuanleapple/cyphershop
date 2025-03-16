@@ -7199,3 +7199,51 @@ body {
   .add-to-cart-button:active {
     transform: translateY(1px);
   }
+  .gradient-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 70px;
+    border-radius: 35px;
+    background: linear-gradient(90deg, #e97042 0%, #e74c3c 50%, #9b59b6 100%);
+    border: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Removes underline from the link */
+}
+
+.gradient-button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.gradient-button:active {
+    transform: scale(0.98);
+}
+.button-container {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    align-items: center;
+}
+.gradient-button-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    border-radius: 35px;
+    background: linear-gradient(90deg, #e97042 0%, #e74c3c 50%, #9b59b6 100%);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Removes underline from the link */
+}
