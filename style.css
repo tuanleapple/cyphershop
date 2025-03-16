@@ -6328,6 +6328,7 @@ header {
     font-size: 14px;
     transition: color 0.3s;
     font-weight: bold;
+    line-height: 36px;
 }
 
 .nav-links a:hover {
@@ -6574,12 +6575,14 @@ header {
         display: none;
     }
 }
-
+.product-image-container img{
+    width: 260px;
+}
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    .product-image-container img{
+        width: 374px;
+        height: 260px;
     }
-    
     .hero h1 {
         font-size: 2rem;
     }
@@ -6688,7 +6691,6 @@ body {
 .product-image-container {
     position: relative;
     background-color: #1a1a1a;
-    padding: 20px;
     height: 260px;
     display: flex;
     justify-content: center;
