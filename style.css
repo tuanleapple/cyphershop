@@ -6618,7 +6618,7 @@ header {
     }
     
     .hero h1 {
-        font-size: 3.8rem;
+        font-size: 3.3rem;
     }
     .hero p {
         font-size: 1.8rem;
@@ -6626,7 +6626,9 @@ header {
     .menu-button span {
         display: none;
     }
-    
+    .header-test h1{
+        font-size: 24px !important;
+    }
     .slide {
         padding: 0 5px;
     }
