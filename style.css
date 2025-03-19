@@ -6614,13 +6614,15 @@ header {
     }
     
     .hero {
-        padding-top: 150px;
+        padding-top: 20px;
     }
     
     .hero h1 {
+        font-size: 3.8rem;
+    }
+    .hero p {
         font-size: 1.8rem;
     }
-    
     .menu-button span {
         display: none;
     }
@@ -6690,7 +6692,7 @@ body {
 /* Product Image Container */
 .product-image-container {
     position: relative;
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
     height: 260px;
     display: flex;
     justify-content: center;
